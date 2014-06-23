@@ -1,0 +1,34 @@
+<div class="well">
+    <h2>Symbol <small>Ex. GOOG, YHOO, AAPL, FB</small></h2>
+
+        <div class="form-group">
+            {{input placeholder="GOOG" class="form-control input-lg" type="text" value=symbol action="fetch"}}
+        </div>
+
+        <div class="form-group">
+          <label class="radio-inline">
+            {{view EmberExample.RadioButton name="months" selectionBinding="months" value="1"}}
+
+            1 Month
+          </label>
+          <label class="radio-inline">
+            {{view EmberExample.RadioButton name="months" selectionBinding="months" value="3"}}
+            3 Month
+          </label>
+          <label class="radio-inline">
+            {{view EmberExample.RadioButton name="months" selectionBinding="months" value="6"}}
+            6 Month
+          </label>
+          <label class="radio-inline">
+            {{view EmberExample.RadioButton name="months" selectionBinding="months" value="12"}}
+            1 Year
+          </label>
+        </div>
+
+        <div class="form-group">
+            <a class="btn btn-primary btn-lg btn-block" {{action "fetch"}}>Get history report</a>
+        </div>
+    </form>
+</div>
+
+{{outlet}}
