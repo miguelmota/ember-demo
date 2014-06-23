@@ -5,7 +5,7 @@ EmberExample.Stock = DS.Model.extend({
 
 EmberExample.StockAdapter = DS.RESTAdapter.extend({
     namespace: 'api/1',
-    host: 'http://localhost:8242'
+    host: 'http://moogs.io:8242'
 });
 
 EmberExample.StockSerializer = DS.RESTSerializer.extend({

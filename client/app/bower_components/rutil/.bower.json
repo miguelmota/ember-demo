@@ -1,0 +1,30 @@
+{
+  "name": "rutil",
+  "main": "rutil.js",
+  "homepage": "https://github.com/miguelmota/rutil",
+  "description": "JavaScript utilities",
+  "keywords": [
+    "utilities"
+  ],
+  "authors": [
+    "Miguel Mota"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "ad9f463243",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ad9f463243678ae839bdc8f4a967f74a48a0e7ff"
+  },
+  "_source": "git://github.com/miguelmota/rutil.git",
+  "_target": "*",
+  "_originalSource": "rutil",
+  "_direct": true
+}
