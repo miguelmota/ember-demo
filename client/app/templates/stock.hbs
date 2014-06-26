@@ -2,4 +2,57 @@
 
 {{line-chart className="chart" columns=columns ticks=ticks}}
 
+{{#if sym.data.snapshot}}
+    <table class="table table-striped">
+        <tr>
+            <td>
+                Last Trade Price
+            </td>
+            <td>
+                ${{sym.data.snapshot.lastTradePriceOnly}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Trade Time
+            </td>
+            <td>
+                {{sym.data.snapshot.lastTradeTime}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Change
+            </td>
+            <td>
+                {{sym.data.snapshot.change}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Open
+            </td>
+            <td>
+                ${{sym.data.snapshot.open}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Days High
+            </td>
+            <td>
+                ${{sym.data.snapshot.daysHigh}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Days Low
+            </td>
+            <td>
+                ${{sym.data.snapshot.daysLow}}
+            </td>
+        </tr>
+    </table>
+{{/if}}
+
 {{outlet}}

@@ -8,7 +8,7 @@ Example [Ember.js](http://emberjs.com/) application that displays stock informat
 
 ## Running
 
-Start the web server
+Start the web server. The reason for the web server is to fetch the data from Yahoo Finance due to the same origin policy restriction on browsers.
 
 ```bash
 node server/app
@@ -23,6 +23,14 @@ grunt serve
 ```
 
 Navigate to `http://localhost:8242`
+
+## Test
+
+```
+karma run
+```
+
+Note that there aren't many tests yet.
 
 # License
 

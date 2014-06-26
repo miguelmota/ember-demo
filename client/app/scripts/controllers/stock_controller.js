@@ -32,7 +32,7 @@ EmberExample.StockController = Ember.ObjectController.extend({
         return o;
     }.property('model'),
     columns: function() {
-        var data = this.get('sym').data;
+        var data = this.get('sym').data.quotes;
 
         function select(prop) {
             return function(o, i) {
@@ -55,7 +55,7 @@ EmberExample.StockController = Ember.ObjectController.extend({
         return ret;
     }.property('model'),
     ticks: function() {
-        var data = this.get('sym').data;
+        var data = this.get('sym').data.quotes;
 
         var ticks = _.map(data, function(o,i) {
             return moment(Date.parse(o.date)).format('MM/DD');

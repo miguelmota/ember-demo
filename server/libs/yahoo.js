@@ -6,7 +6,7 @@ function Yahoo() {
 
 }
 
-Yahoo.prototype.getStocks = function(opts, cb) {
+Yahoo.prototype.getQuotes = function(opts, cb) {
     opts || (opts = {});
 
     var now = moment();
@@ -20,6 +20,26 @@ Yahoo.prototype.getStocks = function(opts, cb) {
     yahooFinance.historical(
         _.defaults(opts, defaults),
         function (err, quotes, url, symbol) {
+            console.log(url);
+            if (err) return cb(err);
+            return cb(null, quotes);
+        }
+    );
+
+};
+
+Yahoo.prototype.getSnapshot = function(opts, cb) {
+    opts || (opts = {});
+
+    var defaults = {
+        symbols: [],
+          fields: ['s', 'l1', 'd1', 't1', 'c1', 'o', 'h', 'g']
+    };
+
+    yahooFinance.snapshot(
+        _.defaults(opts, defaults),
+        function (err, quotes, url, symbol) {
+            console.log(url);
             if (err) return cb(err);
             return cb(null, quotes);
         }
